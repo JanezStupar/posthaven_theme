@@ -6,7 +6,7 @@ The `posthaven_theme` gem provides command line tools for developing a Posthaven
 
 ## Ruby
 
-This gem requires Ruby 2.0 or above. 
+This gem requires Ruby 3.4.3 or above.
 
 ## Posthaven API Key
 
