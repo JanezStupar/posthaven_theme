@@ -1,3 +1,6 @@
+## v0.2.1
+Update filewatcher dependency
+
 ## 0.2.0
 Update dependencies to work with Ruby 3.4.3 and above
 

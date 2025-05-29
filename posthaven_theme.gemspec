@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency('httparty', '~> 0.18.1')
   s.add_dependency('json', '~> 2.6.2')
   s.add_dependency('mimemagic', '~> 0.3.10')
-  s.add_dependency('filewatcher', '~> 2.0.5')
+  s.add_dependency('filewatcher', '~> 2.1')
 
   s.add_development_dependency 'rake', '~> 13.0'
   s.add_development_dependency 'minitest', '~> 5.15.0'
