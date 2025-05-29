@@ -1,5 +1,6 @@
 ## v0.2.1
 Update filewatcher dependency
+Watcher watches subdirectories now
 
 ## 0.2.0
 Update dependencies to work with Ruby 3.4.3 and above

@@ -127,7 +127,7 @@ module PosthavenTheme
     def watch
       puts "Watching current folder: #{Dir.pwd}"
       watcher do |filename, event|
-        filename = filename.gsub("#{Dir.pwd}/", '')
+        filename = filename.is_a?(Hash) ? filename[:path] : filename.gsub("#{Dir.pwd}/", '')
 
         next unless local_assets_list.include?(filename)
         action = if [:updated, :created].include?(event)
@@ -175,8 +175,10 @@ module PosthavenTheme
     private
 
     def watcher
-      Filewatcher.new(Dir.pwd, every: true).watch() do |filename, event|
-        yield(filename, event)
+      Filewatcher.new(["#{Dir.pwd}/**/*"], every: true).watch do |changes|
+        changes.each do |filename, event|
+          yield(filename, event)
+        end
       end
     end
 
